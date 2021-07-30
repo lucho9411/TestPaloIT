@@ -36,7 +36,6 @@ export class PantallaInicialComponent implements OnInit {
       this.alertUtilityService.openError('El número no tiene entre 14 y 16 dígitos!');
     }
     else{
-      this.alertUtilityService.openSave('Número validado correctamente');
       let cantAnt = 0;
       let digitoAnt = '';
       let digito = '';
@@ -55,6 +54,7 @@ export class PantallaInicialComponent implements OnInit {
       }
       this.numero = digitoAnt;
       console.log('Cantidad de veces: ' + cantAnt);
+      this.alertUtilityService.openSave('El número de la suerte es ' + digitoAnt);
     }
   }
 
